@@ -1,0 +1,22 @@
+.account
+    grid-area: account
+    &__list
+        display: flex
+        flex-direction: row
+        list-style: none
+        @media ( min-width: 1024px )
+            width: 500px
+        &__item
+            flex-grow: 1
+            align-self: center
+            margin-left: 20px
+            margin-top: 10px
+            margin-bottom: 10px
+            font-size: 13px
+            text-align: center
+            &:hover
+                cursor: pointer
+                text-decoration: underline
+            @media ( min-width: 1024px )
+                font-size: 15px
+                

@@ -1,0 +1,18 @@
+.header
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: 300px, 250px, 250px
+    column-gap: 10px
+    grid-row-gap: 10px
+    grid-template-areas: "account account account account" "logo header header header" "menu searcher searcher basket"
+    background-color: #0E9F74
+    color: #fff
+    &__title
+        grid-area: header
+        font-family: 'MuseoModerno', cursive
+        font-size: 30px
+    &__logo
+        grid-area: logo
+        justify-self: end
+        width: 50px
+        height: 50px

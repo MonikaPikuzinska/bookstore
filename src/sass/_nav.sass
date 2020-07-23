@@ -1,0 +1,47 @@
+.nav__burger
+    width: 30px
+    height: 30px
+    margin-left: 20px
+    margin-bottom: 15px
+    background-image: url('../img/burger.svg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+    justify-self: end
+    &:hover
+        cursor: pointer
+
+.nav__menu
+    display: none
+    &.active
+        display: block
+        position: fixed
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        background-color: #fff
+        color: #000000b0
+        @media ( min-width: 1024px )
+            right: 70%
+        .nav__menu__btn-close
+            height: 40px
+            width: 100%
+            padding-bottom: 10px 
+            background-color: #0E9F74
+            & img
+                width: 30px
+                height: 30px
+                padding-left: 10px
+                padding-top: 10px
+                &:hover
+                    cursor: pointer
+        .nav__menu__list
+            list-style: none
+            padding-left: 15px
+            padding-top: 10px
+            &__item
+                padding-bottom: 10px
+                &:hover
+                    text-decoration: underline
+                    cursor: pointer

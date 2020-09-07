@@ -5,10 +5,10 @@ import Carousel, { consts } from 'react-elastic-carousel';
 
 function HomePage() {
   
-  const [books, setBooks ] = useState(['']);
+const [books, setBooks ] = useState([]);
 
 
-  const API = 'https://www.googleapis.com/books/v1/volumes?q=subject+new';
+  const API = 'https://www.googleapis.com/books/v1/volumes?q=subject+thriller';
   const handleGetTitle = async () => {
     const response = await axios.get(API);
     setBooks(response.data.items);
@@ -32,13 +32,17 @@ function HomePage() {
     )
   };
   
+  const [breakPoints, setBreakPoints] = useState([
+    { width: 1, itemsToShow: 2, itemsToScroll: 2 },
+    { width: 550, itemsToShow: 5, itemsToScroll: 5 }]);
+
   return (
     <div className="homepage">
       
       <h2 className="homepage__title">New Releases</h2>
       
       <div  className="homepage__list">
-      <Carousel  itemsToShow={5} itemsToScroll={5} renderArrow={myArrow} pagination={false}>
+      <Carousel  breakPoints={breakPoints} renderArrow={myArrow} pagination={false}>
           {books &&
           books.map((book, index) => {
             return (
@@ -54,7 +58,7 @@ function HomePage() {
           </div>
             <h2 className="homepage__title">Bestselling Books</h2>
             <div  className="homepage__list">
-            <Carousel  itemsToShow={5} itemsToScroll={5} renderArrow={myArrow} pagination={false}>
+            <Carousel  breakPoints={breakPoints} renderArrow={myArrow} pagination={false}>
             {books &&
             books.map((book, index) => {
               return (
@@ -71,7 +75,7 @@ function HomePage() {
 
             <h2 className="homepage__title">Bestselling Preorders</h2>
             <div  className="homepage__list">
-            <Carousel  itemsToShow={5} itemsToScroll={5} renderArrow={myArrow} pagination={false}>
+            <Carousel  breakPoints={breakPoints} renderArrow={myArrow} pagination={false}>
             {books &&
             books.map((book, index) => {
               return (
@@ -88,7 +92,7 @@ function HomePage() {
 
             <h2 className="homepage__title">Related to items you've viewed</h2>
             <div  className="homepage__list">
-            <Carousel  itemsToShow={5} itemsToScroll={5} renderArrow={myArrow} pagination={false}>
+            <Carousel  breakPoints={breakPoints} renderArrow={myArrow} pagination={false}>
             {books &&
             books.map((book, index) => {
               return (

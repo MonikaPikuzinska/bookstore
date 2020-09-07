@@ -7,7 +7,7 @@ import './css/main.min.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Header/>
       <Page/>
       <Footer/>

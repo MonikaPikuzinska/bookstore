@@ -1,0 +1,30 @@
+.sign
+    grid-area: page
+    min-height: calc(100vh - 300px)
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    &__sform, &__lform
+        display: flex
+        flex-direction: column
+    &__gap
+        width: 3px
+        min-height: calc(100vh - 340px)
+        margin: 20px 30px
+        background-color: #4746463d
+    &__sform__title, &__lform__title
+        display: inline-block
+        margin-bottom: 10px
+        font-family: 'MuseoModerno', cursive
+        color: #000000b7
+    &__input
+        display: block
+        flex-basis: 25px
+        margin-bottom: 10px
+        padding-left: 5px
+    &__sform__btn, &__lform__btn
+        background-color: #0E9F74
+        color: #fff
+        font-family: 'MuseoModerno', cursive
+        font-size: 15px

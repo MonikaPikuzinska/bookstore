@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Prompt } from 'react-router-dom';
+import { Prompt, BrowserRouter as Router  } from 'react-router-dom';
 
 
 const Contact = () => {
@@ -19,9 +19,11 @@ const Contact = () => {
             <textarea cols="500" rows="5" className="contact__form__textarea" placeholder="Write a message" value={text}  onChange={handleValue}/>
             <button className="contact__form__btn">Send</button>
         </form>
+        <Router>
         <Prompt
             when={text}
             message='Send a message'/>
+            </Router>
     </div> 
     );
 }

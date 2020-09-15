@@ -4,6 +4,7 @@ import Contact from '../pages/Contact';
 import Help from '../pages/Help';
 import Sign from '../pages/Sign';
 import Category from '../pages/Category';
+import Book from '../pages/Book';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'; 
 import { render } from 'react-dom';
 
@@ -11,7 +12,7 @@ function Page() {
   return (
     <div className="page">
      <BrowserRouter>
-      {/* <Switch> */}
+      <Switch>
         
   <Route path="/contact" render={(props) =><Contact/>}/>
         <Route path="/help" render={(props) =><Help/>}/>
@@ -28,7 +29,8 @@ function Page() {
         <Route path="/romance" render={(props) =><HomePage/>}/>
         <Route path="/science" render={(props) =><HomePage/>}/>
         <Route path="/sciencefiction" render={(props) =><HomePage/>}/>
-      {/* </Switch> */}
+        <Route path="/:id" render={(props) =><Book/>}/>
+      </Switch>
       </BrowserRouter>
     </div>
   );

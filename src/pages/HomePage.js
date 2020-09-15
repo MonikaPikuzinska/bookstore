@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Carousel, { consts } from 'react-elastic-carousel';
 
@@ -45,13 +45,16 @@ const [books, setBooks ] = useState([]);
       <Carousel  breakPoints={breakPoints} renderArrow={myArrow} pagination={false}>
           {books &&
           books.map((book, index) => {
+            console.log(book.volumeInfo.industryIdentifiers[0].identifier)
             return (
+              <Link to={`/${book.volumeInfo.industryIdentifiers[0].identifier}`}>
               <div className="homepage__list__book" key={index}>
                 <img src={book.volumeInfo.imageLinks.thumbnail}  className="homepage__list__book__cover" alt="cover"/>
                 <p className="homepage__list__book__title">{book.volumeInfo.title}</p>
                 <p className="homepage__list__book__author">{book.volumeInfo.authors[0]}</p>
                 <p className="homepage__list__book__price">{book.volumeInfo.pageCount} zł</p>
               </div>
+              </Link>
             );
           })}
           </Carousel>

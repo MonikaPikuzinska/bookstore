@@ -1,0 +1,46 @@
+.book
+    grid-area: page
+    min-height: calc(100vh - 300px)
+    display: grid
+    column-gap: 15px
+    grid-template-rows: repeat(5, auto)
+    grid-template-columns: 1fr
+    grid-template-areas: "title" "img" "price" "button" "description"
+    @media ( min-width: 1024px )
+        grid-template-rows: repeat(4, auto)
+        grid-template-columns: repeat(2, 50%)
+        grid-template-areas: "title title" "img price" "img button" "description description"
+    color: #000000b7
+
+    &__title
+        grid-area: title
+        justify-self: center
+        padding-top: 15px
+        font-family: 'Open Sans', sans-serif
+        font-weight: bold
+        font-size: 25px
+    &__img
+        grid-area: img
+        justify-self: center
+    &__price
+        grid-area: price
+        justify-self: center
+        align-self: center
+        font-size: 20px
+        font-family: 'Open Sans', sans-serif
+    &__btn
+        grid-area: button
+        justify-self: center
+        align-self: start
+        background-color: #0E9F74
+        color: #fff
+        font-family: 'MuseoModerno', cursive
+        font-size: 15px
+        width: 30%
+        height: 50%
+        @media ( min-width: 1024px )
+            height: 25%
+    &__description
+        grid-area: description
+        margin: auto 10px
+        text-align: justify

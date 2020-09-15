@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import close from '../img/close.svg';
-import { NavLink } from 'react-router-dom';
 
 function Searcher() {
   const [books, setBooks ] = useState([]);

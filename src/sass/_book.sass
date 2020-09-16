@@ -9,7 +9,7 @@
     @media ( min-width: 1024px )
         grid-template-rows: repeat(4, auto)
         grid-template-columns: repeat(2, 50%)
-        grid-template-areas: "title title" "img price" "img button" "description description"
+        grid-template-areas: "title title" "img price" "img button" "description emp"
     color: #000000b7
 
     &__title
@@ -22,6 +22,8 @@
     &__img
         grid-area: img
         justify-self: center
+        @media ( min-width: 1024px )
+            justify-self: end
     &__price
         grid-area: price
         justify-self: center
@@ -42,5 +44,5 @@
             height: 25%
     &__description
         grid-area: description
-        margin: auto 10px
+        margin: auto 30px
         text-align: justify

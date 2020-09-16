@@ -4,7 +4,7 @@ import basket from '../img/basket.svg';
 function Basket() {
   return (
     <div className="basket">
-      <div className="basket__counter">3</div>
+      <div className="basket__counter">0</div>
       <img src={basket} className="basket__btn" alt="basket"/>
     </div>
   );

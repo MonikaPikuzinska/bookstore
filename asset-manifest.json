@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/bookstore/static/css/main.06f07917.chunk.css",
+    "main.js": "/bookstore/static/js/main.b29030f5.chunk.js",
+    "main.js.map": "/bookstore/static/js/main.b29030f5.chunk.js.map",
+    "runtime-main.js": "/bookstore/static/js/runtime-main.2bf98abd.js",
+    "runtime-main.js.map": "/bookstore/static/js/runtime-main.2bf98abd.js.map",
+    "static/js/2.dd6e6edb.chunk.js": "/bookstore/static/js/2.dd6e6edb.chunk.js",
+    "static/js/2.dd6e6edb.chunk.js.map": "/bookstore/static/js/2.dd6e6edb.chunk.js.map",
+    "index.html": "/bookstore/index.html",
+    "precache-manifest.7e974213789844d251bccc2492de6cc1.js": "/bookstore/precache-manifest.7e974213789844d251bccc2492de6cc1.js",
+    "service-worker.js": "/bookstore/service-worker.js",
+    "static/css/main.06f07917.chunk.css.map": "/bookstore/static/css/main.06f07917.chunk.css.map",
+    "static/js/2.dd6e6edb.chunk.js.LICENSE.txt": "/bookstore/static/js/2.dd6e6edb.chunk.js.LICENSE.txt",
+    "static/media/basket.svg": "/bookstore/static/media/basket.ad45da59.svg",
+    "static/media/main.min.css": "/bookstore/static/media/burger.f421c9f6.svg",
+    "static/media/close.svg": "/bookstore/static/media/close.b135172c.svg",
+    "static/media/facebook.svg": "/bookstore/static/media/facebook.373569e0.svg",
+    "static/media/instagram.svg": "/bookstore/static/media/instagram.55ca4286.svg",
+    "static/media/logo.svg": "/bookstore/static/media/logo.e8705c2b.svg",
+    "static/media/twitter.svg": "/bookstore/static/media/twitter.2d61e0a8.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2bf98abd.js",
+    "static/js/2.dd6e6edb.chunk.js",
+    "static/css/main.06f07917.chunk.css",
+    "static/js/main.b29030f5.chunk.js"
+  ]
+}

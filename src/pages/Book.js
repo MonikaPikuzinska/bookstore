@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-const Book = (props) => {
+const Book = () => {
     const [counter, setCounter ] = useState(1);
     const [book, setBook ] = useState([]);
 

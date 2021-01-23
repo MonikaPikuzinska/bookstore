@@ -20,10 +20,10 @@ const Contact = () => {
             <button className="contact__form__btn">Send</button>
         </form>
         <Router>
-        <Prompt
-            when={text}
-            message='Send a message'/>
-            </Router>
+            <Prompt
+                when={text}
+                message='Send a message'/>
+        </Router>
     </div> 
     );
 }

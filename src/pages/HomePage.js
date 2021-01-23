@@ -59,9 +59,9 @@ const [books, setBooks ] = useState([]);
           })}
           </Carousel>
           </div>
-            <h2 className="homepage__title">Bestselling Books</h2>
-            <div  className="homepage__list">
-            <Carousel  breakPoints={breakPoints} renderArrow={myArrow} pagination={false}>
+          <h2 className="homepage__title">Bestselling Books</h2>
+          <div  className="homepage__list">
+          <Carousel  breakPoints={breakPoints} renderArrow={myArrow} pagination={false}>
             {books &&
             books.map((book, index) => {
               return (
@@ -75,11 +75,11 @@ const [books, setBooks ] = useState([]);
                 </Link>
               );
             })};
-            </Carousel>
+          </Carousel>
           </div>
 
-            <h2 className="homepage__title">Bestselling Preorders</h2>
-            <div  className="homepage__list">
+          <h2 className="homepage__title">Bestselling Preorders</h2>
+          <div  className="homepage__list">
             <Carousel  breakPoints={breakPoints} renderArrow={myArrow} pagination={false}>
             {books &&
             books.map((book, index) => {
@@ -97,8 +97,8 @@ const [books, setBooks ] = useState([]);
             </Carousel>
           </div>
 
-            <h2 className="homepage__title">Related to items you've viewed</h2>
-            <div  className="homepage__list">
+          <h2 className="homepage__title">Related to items you've viewed</h2>
+          <div  className="homepage__list">
             <Carousel  breakPoints={breakPoints} renderArrow={myArrow} pagination={false}>
             {books &&
             books.map((book, index) => {

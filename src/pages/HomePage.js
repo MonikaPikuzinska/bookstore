@@ -8,7 +8,7 @@ function HomePage() {
 const [books, setBooks ] = useState([]);
 
 
-  const API = 'https://www.googleapis.com/books/v1/volumes?q=subject+thriller';
+  const API = 'https://www.googleapis.com/books/v1/volumes?q=search+horror';
   const handleGetTitle = async () => {
     const response = await axios.get(API);
     setBooks(response.data.items);
@@ -18,6 +18,7 @@ const [books, setBooks ] = useState([]);
   useEffect(()=>{
     handleGetTitle();
   },[]);
+  
 
   function myArrow({ type, onClick, isEdge }) {
     const pointer = type === consts.PREV ? '🡸' : '🡺';
@@ -35,7 +36,7 @@ const [books, setBooks ] = useState([]);
   const [breakPoints, setBreakPoints] = useState([
     { width: 1, itemsToShow: 2, itemsToScroll: 2 },
     { width: 550, itemsToShow: 5, itemsToScroll: 5 }]);
-
+    console.log(books);
   return (
     <div className="homepage">
       
@@ -45,13 +46,13 @@ const [books, setBooks ] = useState([]);
       <Carousel  breakPoints={breakPoints} renderArrow={myArrow} pagination={false}>
           {books &&
           books.map((book, index) => {
-            console.log(book.volumeInfo.industryIdentifiers[0].identifier)
+            // console.log(book.volumeInfo.industryIdentifiers[0].identifier)
             return (
               <Link className="homepage__list__book--link" to={`/${book.volumeInfo.industryIdentifiers[0].identifier}`}>
               <div className="homepage__list__book" key={index}>
                 <img src={book.volumeInfo.imageLinks.thumbnail}  className="homepage__list__book__cover" alt="cover"/>
                 <p className="homepage__list__book__title">{book.volumeInfo.title}</p>
-                <p className="homepage__list__book__author">{book.volumeInfo.authors[0]}</p>
+                <p className="homepage__list__book__author">{book.volumeInfo.authors}</p>
                 <p className="homepage__list__book__price">{book.volumeInfo.pageCount} zł</p>
               </div>
               </Link>
@@ -69,7 +70,7 @@ const [books, setBooks ] = useState([]);
                 <div className="homepage__list__book">
                   <img src={book.volumeInfo.imageLinks.thumbnail}  className="homepage__list__book__cover" alt="cover"/>
                   <p className="homepage__list__book__title">{book.volumeInfo.title}</p>
-                  <p className="homepage__list__book__author">{book.volumeInfo.authors[0]}</p>
+                  <p className="homepage__list__book__author">{book.volumeInfo.authors}</p>
                   <p className="homepage__list__book__price">{book.volumeInfo.pageCount} zł</p>
                 </div>
                 </Link>
@@ -88,7 +89,7 @@ const [books, setBooks ] = useState([]);
                 <div className="homepage__list__book" key={index}>
                   <img src={book.volumeInfo.imageLinks.thumbnail}  className="homepage__list__book__cover" alt="cover"/>
                   <p className="homepage__list__book__title">{book.volumeInfo.title}</p>
-                  <p className="homepage__list__book__author">{book.volumeInfo.authors[0]}</p>
+                  <p className="homepage__list__book__author">{book.volumeInfo.authors}</p>
                   <p className="homepage__list__book__price">{book.volumeInfo.pageCount} zł</p>
                 </div>
                 </Link>
@@ -107,7 +108,7 @@ const [books, setBooks ] = useState([]);
                 <div className="homepage__list__book" key={index}>
                   <img src={book.volumeInfo.imageLinks.thumbnail}  className="homepage__list__book__cover" alt="cover"/>
                   <p className="homepage__list__book__title">{book.volumeInfo.title}</p>
-                  <p className="homepage__list__book__author">{book.volumeInfo.authors[0]}</p>
+                  <p className="homepage__list__book__author">{book.volumeInfo.authors}</p>
                   <p className="homepage__list__book__price">{book.volumeInfo.pageCount} zł</p>
                 </div>
                 </Link>

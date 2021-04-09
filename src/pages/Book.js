@@ -7,7 +7,7 @@ const Book = () => {
     const [book, setBook ] = useState([]);
 
     let { id } = useParams();
-    const API = 'https://www.googleapis.com/books/v1/volumes?q=subject+thriller';
+    const API = 'https://www.googleapis.com/books/v1/volumes?q=search+horror';
     const handleGetTitle = async () => {
         const response = await axios.get(API);
         setBook(response.data.items.filter(b => {return b.volumeInfo.industryIdentifiers[0].identifier===id}))
